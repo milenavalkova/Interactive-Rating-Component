@@ -1,0 +1,193 @@
+/*=========================== GOOGLE FONTS ==========================*/
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/*=========================== VARIABLES CSS ==========================*/
+:root {
+    
+     /*============= Colors ==============*/
+     /* HSL color mode */
+     --primary-orange: hsl(25, 97%, 53%);
+     --neutral-white:hsl(0, 0%, 100%);
+     --neutral-light-grey: hsl(217, 12%, 63%);
+     --neutral-medium-grey: hsl(216, 12%, 54%);
+     --neutral-medium-blue: hsl(213, 16%, 23%);
+     --neutral-dark-blue: hsl(214, 18%, 17%);
+     --neutral-darkest-blue: hsl(216, 12%, 8%);
+
+     /*============= Font and typography ==============*/
+     --body-font: 'Overpass', sans-serif;
+
+     --heading-font-size: 1.5rem;
+     --paragraph-font-size: .85rem;
+
+    /*============= Font weight ==============*/
+    --font-regular: 400;
+    --font-bold: 700;
+
+    /*============= Margins Bottom ==============*/
+    --mb-2: 1.5rem;
+
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --heading-font-size: 1.5rem;
+        --paragraph-font-size: .80rem;
+
+    }
+}
+
+/*============= BASE ==============*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--neutral-darkest-blue);
+ }
+
+ h1 {
+    color: var(--neutral-white);
+    font-weight: var(--font-bold);
+    font-size: var(--heading-font-size);
+    margin-bottom: var(--mb-2);
+}
+
+h3 {
+    color: var(--primary-orange);
+    font-weight: var(--font-regular);
+    margin-bottom: var(--mb-2);
+    font-size: var(--paragraph-font-size);
+}
+
+p{
+    color: var(--neutral-light-grey);
+    font-size: var(--paragraph-font-size);
+    margin-bottom: var(--mb-2);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*============= RATING STATE ==============*/
+.container {
+    width: 320px;
+    height: 350px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: var(--neutral-dark-blue);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.rating-img-container{
+    background-color: var(--neutral-medium-blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--mb-2);
+}
+
+.rating-numbers-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: var(--mb-2);
+}
+
+.rating-number{
+    background-color: var(--neutral-medium-blue);
+    color: var(--neutral-light-grey);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: var(--paragraph-font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.rating-number:hover{
+    background-color: var(--primary-orange);
+    color:var(--neutral-white);
+    cursor: pointer;
+}
+
+.rating-numbers-container.active{
+    background-color: var(--neutral-light-grey);
+    color: var(--neutral-white);
+}
+
+.rating-btn{
+    background-color: var(--primary-orange);
+    color:var(--neutral-white);
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: var(--paragraph-font-size);
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 20px;
+}
+
+.rating-btn:hover {
+    background-color: var(--neutral-white);
+    color:var(--primary-orange);
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--neutral-light-grey);
+    color: var(--neutral-white);
+}
+
+/*============= THANK YOU STATE ==============*/
+
+.thank-state-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thank-state-container.active{
+    visibility: visible;
+}
+
+.thank-state-container .thank-img-container{
+    margin-bottom: var(--mb-2);
+}
+
+.thank-img-container .thank-img{
+    height: 100px;
+}
+
+.selected-info{
+    background-color: var(--neutral-medium-blue);
+    height: 22.5px;
+    line-height: 25px;
+    width:160px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: var(--mb-2); 
+}
+
+.thank-state-content {
+    text-align: center;
+}
+
+.container.hide{
+    display: none;
+}
